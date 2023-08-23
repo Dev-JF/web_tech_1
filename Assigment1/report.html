@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<!-- changes css file based on screen size -->
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="logo.png">
+	<link type="text/css" media="(min-width: 800px)" rel="stylesheet" href="mainstyle.css">
+	<link type="text/css" media="(max-width: 425px)" rel="stylesheet" href="smartphone.css" />
+	<link type="text/css" media="(max-width: 799px) and (min-width: 426px)" rel="stylesheet" href="tabletstyle.css">
+	<title>Department of Transport</title>
+
+</header>
+
+<body>
+	<img  src="department-logo.png" alt="dptlogo" id="dptlogo" style="width: 100%; max-width: 200px;" >
+	<header>
+
+		<div class="nav">
+
+			<!--main menu of website -->
+			<a id="homeBttn" href="home.html" >Home</a>
+			<a href="contact.html">Contact Us</a>
+			<a href="home.html">Our Location</a>
+			<a href="ev-overview.html">EV Overview</a>
+			<a href="report.html">Report</a>
+		</div>
+
+	</header>
+
+
+
+
+
+
+
+    <!-- main content of webstie -->
+	<div class="product">
+
+
+
+		
+
+		<h2>My Report</h2>
+		
+		
+		
+		<h3>My design decisions</h3>
+		<p>The overall colour scheme of my website is a white background with a grey menu bar, grey headings with<br>
+		black underlined subheadings. All of the text is in san-sarif. Every image that doubles as an link has a description.<br>
+		At the bottom of the page there is a home button, an arrow that is a return to the top of the page button.<br>
+		Each car being reviewed has an image of the car with a  brief description and dot points of its main features.</p>
+		
+		<h3>Why it is a good design</h3>
+		
+		<p>The design of the website is built with purpose in mind. The content of the website displays the information of the websites,<br>
+     		and it is created to be clear and understandable. The grey navigation menu and headings contrasts well with the white which allows the content to be seen.<br>
+			The black text also contrasts well with the white background.</p>
+		
+		<p>The design conforms to web standards, this includes using CSS to implement style. The CSS is in separate files to the HTML and the HTML documents<br>
+    		contain the content of the website with CSS styling in the HTML when required. The website design is quick and responsive, loading content quickly and changing<br>
+			to different pages quickly.</p>
+		
+		<p>The design is focused around on the user and the usability of the website. This includes the effectiveness of the website in its ability to allow the user <br>
+		   to view the information on the website. The efficiency allowing the user to simply navigate the website and the satisfaction of the design and its performance</p>
+		
+		<p>The design has common characteristics to other similar websites, this includes car review websites like Drive.com, carreview.com and whiccar.com. <br>
+     		This allows the design to conform to web conventions, specifically to the design conventions of other car review websites. This also aids in the ease <br> 
+			to remember the website layout as the layout of the website will seem familiar to <br> 
+			the users as it will be similar to how other websites are displayed and how the user navigates other websites. </p>
+		
+		<h3>How this design conforms to Web standards</h3>
+		<p>The website conforms to web standards in a few ways. This includes having HTML and CSS separate and having different CSS files for different device types.<br>
+		   The website has also been built to be responsive.</p>
+		<p>This website is accessible, cross device and cross browser compatible. The design allows users to access the website on desktop, tablet or mobile.<br>
+    		This website also allows users to utilise different browsers with the content still being viewable.</p>
+		<p>This website also meets web conventions this includes having a banner at the top of the page with the logo on the top left with sectional navigation,<br>
+    		the logo at the top is made to be a home button, back to top link at the bottom of the page, and a site map available at the bottom of the page.</p>
+		
+		<h3>How this design conforms to Accessibility standards</h3>
+		<p>The website conforms to accessibility standards including the WCAG 2 and WC3 Design principles.<br>
+    		The website is perceivable as it has a simple design through the use of a white background and black text.<br>
+			But the information is not lost with the simple design. The website is operable on a range of devices and has clear navigation,<br>
+			this is to allow people with a disability to still use the website and not restrict their accessibility. The website is understandable as<br>
+			text content is readable and the website is operable in a simple and predictable way, the website uses context information and each element on the page is clear.<br>
+			The websites is also able to be navigated without a keyboard or mouse e.g. via touchscreen. The website is also robust as it is compatible with older browsers <br>
+			or non-standard browsers.</p>
+		
+		<h3>How users will find it easy to navigate on any device</h3>
+		
+		<p>The users will find it easy to navigate the website on any device as the site includes a menu bar at the top and a simple footer bar with a home button,<br>
+		and a back to top button to make it easier for users to get to the top and the logo is a link to the home page. A more specific example of easy navigation<br>
+		would be on the  home page that not only includes what is discussed above but it also has a sub menu for user to click on to take them to a specific section of the page.<br>
+		Each specific car page has a menu at the bottom of the page leading to other EV car  pages. This increases the navigation of the webpage as it reduces the need<br>
+		for users to return to the EV  overview page to find the next vehicle they wish to view. The website also has a site map at the bottom of  the page to help users<br>
+		understand the navigation of the website.</p>
+		
+		<h3>Why the department should adopt your design</h3>
+		
+		<p>This design should be adopted by the department as it conforms to good web design principles, it incorporates accessibility,<br>
+		the design of the website is not overly complicated and can be easily changed if needed, and the site conforms to the “car review” format.<br>
+		Furthermore if the department wanted to change or add a new electric vehicle to their website they would only need to copy<br>
+		one of the electric vehicles html page and change the information and images. This is also true for the design of the website,<br>
+		if the colour or layout needed to be changed the CSS files are designed so it is easy to change the design.</p>
+		
+		
+		
+		<h3>Problems Faced</h3>
+		
+		<p>Problem:<br>
+			<br>On smaller screens I was unable to get text to break to a new line when the size of the screen changes<br>
+			<br>Attempted Solutions:<br>
+			<br>In the CSS file for the p element is tried to set the font size to adjust to vw and percentage.<br>
+			I also attempted to use other CSS styling methods like word-break but to no avail. <br>
+			<br>Used solution: <br>
+			<br>Using the br tag in HTML to break  the line to ensure the text would fit on any screen size.
+</p><br>
+		
+		<p>Problem:<br>
+		<br>When using the Footer attribute in HTML instead of the div called “Bottomnav”, the formatting of the Footer<br>
+		would break and not conform to the design of the website even when formatting was applied to the Footer in CSS
+		<br><br>Attempted Solutions:<br><br>
+		-	Assigning CSS design to the Footer element in the CSS file<br>
+		-	Assigning style to the HTML elements  <br>
+		<br>Used Solution:<br><br>
+		Creating a Div called “Bottomnav” allowed the formatting to be consistent across the site.
+		</p><br>
+		
+		<p><br>Problem:<br><br>
+		Sometimes elements would not space out properly or cause issues when using the padding-bottom or padding-top style in CSS.
+		<br><br>Used Solution:<br><br>
+		I found using empty an p element or h elements and the applying padding-bottom or padding-top styling in CSS to those elements would work.
+
+		</P>
+		
+		<h3>References</h3>
+		<p>arrival.com. (n.d.). Arrival | Zero-emission solutions. [online] Available at: https://arrival.com/world/en.</p>
+		<p>BYD USA. (n.d.). BYD USA · Build Your Dreams · International Manufacturer of Electric Cars, Trucks, Buses, Forklifts,<br>
+    		Monorail, and Battery Systems. [online] Available at: https://en.byd.com/.</p>
+		<p>Centre For Accessibility Australia. (n.d.). What is the WCAG Standard? [online] Available at:<br>
+    		https://www.accessibility.org.au/guides/what-is-the-wcag-standard/.</p>
+		<p>Drive. (2020). Reviews. [online] Available at: https://www.drive.com.au/reviews/.</p>
+		<p>Ford Australia. (2019). Ford Australia. [online] Available at: https://www.ford.com.au/.</p>
+		<p>Friedman, V. (2019). 10 Principles Of Good Website Design — Smashing Magazine. [online] Smashing <br>
+		  Magazine. Available at: https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/.</p>
+		<p>KeyCDN. (n.d.). Web Standards. [online] Available at: https://www.keycdn.com/blog/web-standards.</p>
+		<p>Nikola Motor Company. (n.d.). Nikola Corp. [online] Available at: https://nikolamotor.com/.</p>
+		<p>Rivian (2019). Rivian. [online] Rivian.com. Available at: https://rivian.com/.</p>
+		<p>Singh, N. (n.d.). 20 website design principle to follow. [online] Canva. Available at:<br>
+		https://www.canva.com/learn/20-web-design-principles-follow/.</p>
+		<p>Tesla (2019). Electric Cars, Solar Panels & Clean Energy Storage | Tesla. [online] Tesla.com. Available at:<br> 
+		   https://www.tesla.com/en_AU.</p>
+		<p>W3C (2019). Standards - W3C. [online] W3.org. Available at: https://www.w3.org/standards/.</p>
+		<p>WhichCar. (n.d.). Car Reviews | WhichCar.com.au. [online] Available at: <br>
+		https://www.whichcar.com.au/car-reviews [Accessed 2 Aug. 2022].</p>
+		
+		
+		<p style="padding-top: 100px;"></P>
+		
+		<div class="buttomNav">
+
+		
+
+			<!-- images referenced on the home page -->
+			<a href="home.html" style="background-color: white; width: 30%; "><img src="general-pics/home.png"></img><a> 
+			<a href="#top" style="background-color: white; width: 30%; "><img src="general-pics/top-arrow.png"></img><a> 
+			
+
+			</div>
+		
+
+	</div>
+
+
+
+</body>
+
+
+
+</html>

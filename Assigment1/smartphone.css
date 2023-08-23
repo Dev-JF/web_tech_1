@@ -1,0 +1,114 @@
+body {
+  background-color: white;
+  white-space: nowrap;
+  text-align: start;
+  font-family: sans-serif;
+  overflow-x:hidden;
+  word-break: break-word;
+  width:80%;
+  position: center;
+}
+
+nav {
+  
+  list-style-type: none;
+  
+  
+  overflow: hidden;
+  background-color: darkgrey;
+  width: 7vw;
+  max-width: 600px;
+   overflow: auto;
+}
+
+.nav a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  width: 18vw;
+  max-width: 500px;
+  text-align: centre-left;
+}
+
+a:hover {
+  background-color: #000;
+}
+
+:link, :visited {
+  background-color: darkgrey;
+  marging: 0;
+  color: white;
+  padding: 14.5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a {
+ background-color: darkgrey;
+ color: white;
+ text-decoration: none;
+ font-size: 12px;
+	
+}
+
+
+h2 {
+	
+	padding-top: 70px;
+	color: darkgrey;
+	font-size: 8vw;
+	
+	
+}
+
+h3 {
+	padding-top: 20px;
+	color: darkgrey;
+	font-size: vw;
+}
+
+h4 {
+	
+	font-size: 13px;
+	
+}
+
+p {
+	
+	
+	
+	font-size: 4vw;
+}
+ 
+img {
+
+	width: 100%;
+	max-width: 400px;
+	
+}
+
+
+
+.buttomNav {
+	
+	max-width: 250px;
+	width:50vw;
+
+}
+
+.carLogo {
+	
+	max-width: 250px;
+	width:60vw;
+}
+
+
+ul {
+	
+	font-size: 4vw;
+	
+}
