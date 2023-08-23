@@ -1,0 +1,193 @@
+body {
+  background-color: #fcd6b5;
+ 
+  white-space: nowrap;
+  text-align: start;
+ 
+  overflow-x:hidden;
+  word-break: break-word;
+  width:80%;
+  position: center;
+}
+
+/* allows menu to change colour when hovered over and resize when screen changed*/
+nav {
+  
+  list-style-type: none;
+  
+  padding-bottom: 400px;
+  overflow: hidden;
+  background-color: lightgrey;
+  width: 10vw;
+  max-width: 800px;
+   overflow: auto;
+}
+
+.nav a {
+ float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 10px;
+  width: 10vw;
+  max-width: 900px;
+  text-align: left;
+  background-color: lightgrey;
+}
+
+a:hover {
+  background-color: #fac08e;
+}
+
+:link, :visited {
+  background-color: darkgrey;
+  marging: 0;
+  color: #fac08e;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+header {
+	
+	padding-left: 10vw;
+}
+
+#styleMain {
+	padding-top: 5vw;
+	padding-left: 0vw;
+    padding-right: 0vw;
+	
+}
+
+#main {
+	padding-left: 0px;
+	font-size: .7em;
+
+	display: block;
+	background-color: #fac08e;
+	color: #231f20;
+	text-align: left;
+	width: 300px;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-right: 2vw;
+	font-size: .8em;
+}
+
+#peopleDwelling {
+	display: block;
+	background-color: #fac08e;
+	color: #231f20;
+	text-align: left;
+	width: 300px;
+}
+
+
+#theDwelling {
+	display: none;
+	background-color: #fac08e;
+	color: #231f20;
+	width: 300px;
+}
+
+#animals {
+	display: none;
+	background-color: #fac08e;
+	color: #231f20;
+	width: 300px;
+}
+
+
+#rating {
+	display: none;
+	background-color: #fac08e;
+	color: #231f20;
+	width: 300px;
+}
+
+#evType {
+	
+	display: none;
+}
+
+hr {
+	
+	width:40%;
+	margin-left:0;
+}
+
+h1 {
+	
+	padding-top: 10px;
+}
+
+img {
+	
+	
+	max-width: 18px;
+}
+
+#formProgress {
+	
+	height:24px;
+	width:30%;
+	color: lightgrey;
+	
+}
+
+#aboutUs {
+	padding-left: 100px;
+	display: none;
+	background-color: #fac08e;
+	color: #231f20;
+	text-align: left;
+	width: 200px;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-right: 2vw;
+	font-size: .8em;
+}
+
+#contactUs {
+	
+	padding-left: 100px;
+	display: none;
+	background-color: #fac08e;
+	color: #231f20;
+	text-align: left;
+	width: 300px;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-right: 2vw;
+	font-size: .8em;
+}
+	
+}
+
+.help {
+  position: relative;
+  display: inline-block;
+ 
+  padding-top: .2vw;
+}
+
+.help .helptext {
+  visibility: hidden;
+  width: 280px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding: .5vw 0vw;
+
+ 
+  position: absolute;
+  z-index: 1;
+}
+
+.help:hover .helptext {
+  visibility: visible;
+}
+

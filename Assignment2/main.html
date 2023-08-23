@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+	<!-- changes css file based on screen size -->
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="Australian_Bureau_of_Statistics_logo.png">
+	<link type="text/css" media="(min-width: 800px)" rel="stylesheet" href="mainstyle.css">
+	<link type="text/css" media="(max-width: 425px)" rel="stylesheet" href="smartphone.css" />
+	<link type="text/css" media="(max-width: 799px) and (min-width: 426px)" rel="stylesheet" href="tabletstyle.css">
+	<title></title>
+	
+</head>
+
+<body>
+	<script src="mainscript.js"></script>
+
+	<header>
+     <img  src="ABSlogo.png" alt="dptlogo" id="dptlogo" style="width: 100%; max-width: 200px; " >
+	<!-- main menu of website -->
+	<div class="nav">
+
+
+			<a onclick="toMain()">Home</a>
+			<a onclick="window.location.reload()">New Form</a>
+			<a onclick="aboutUs()">About</a>
+			<a onclick="contactUs()">Contact</a>
+			
+		</div>
+
+	</header>
+<div class="styleMain" id="styleMain">
+
+<div class="main" id="main">	
+	<h1>Census Questionnaire</h1>
+	
+	
+	<progress class="formProgress"id="formProgress" value="25" max="100"> 20% </progress> <br>
+	
+	<form id="mainForm" method="POST" action="https://tau.usq.edu.au/courses/CSC2406/reflect.php">
+	<!-- This is the people section of the form -->
+	<h2>1. People in the Dwelling</h2>
+	<hr class="hline">
+	
+	<div class="peopleDwelling" id="peopleDwelling">
+	
+		<label for="people">How many people live in the dwelling:</label>
+			<br><input type="number" id="people" name="people"
+				min="1" max="4" oninput="peopleFromDwelling();">
+		<div class="help"><img src="qm.png" alt="question mark" id="qm">
+			<span class="helptext">Enter the number of people in the dwelling</span>
+		</div><br>
+		<div class="peopleInDwelling" id="peopleInDwelling"></div>
+		
+		
+		
+	</div>
+	
+	
+	<!-- This is the dwelling section of the form -->
+	<h2>2. The Dwelling</h2>
+	<hr>
+	
+	<div class="theDwelling" id="theDwelling"><br>
+		
+		<br><label for="dwellType">Type of Dwelling:</label><br>
+		<br><select id="dwellingType" name="dwellingType"><br>
+			<option value="detached">Detached House</option>
+			<option value="semi-detached">Semi-detached House</option>
+			<option value="apartment">Apartment</option>
+			<option value="retirement">Retirement Village</option>
+			<option value="caravan">Caravan</option>
+			<option value="houseBoat">House Boat</option>
+			<option value="boat">Boat</option>
+			<option value="tent">Tent</option>
+		 </select><br>
+		 
+		 <legend>Is the Dwelling:</legend><br>
+
+		<div>
+		<input type="radio" id="ownedOut" name="ownedOut" value=""
+             checked/>
+		<label for="ownedOut">Owned outright</label>
+		</div>
+
+		<div>
+		<input type="radio" id="ownedMorg" name="ownedMorg" value="ownedMorg"/>
+		<label for="ownedMorg">Owned with Mortgage</label>
+		</div>
+		
+		<div>
+		<input type="radio" id="rented" name="rented" value="rented"/>
+		<label for="rented">Rented</label>
+		</div>
+		
+		<div>
+		<input type="radio" id="rentFree" name="rentFree" value="rentFree"/>
+		<label for="rentFree">Rent Free</label>
+		</div><br>
+		
+		
+		
+		
+		<legend>Sources of energy for the Dwelling:</legend><br>
+
+		<div>
+		<input type="checkbox" id="mains" name="mains"
+             checked/>
+		<label for="mains">Mains electricity</label>
+		</div>
+
+		<div>
+			<input type="checkbox" id="panels" name="panels"/>
+			<label for="panels">Photovoltaic Panles</label>
+		</div>
+		
+		<div>
+			<input type="checkbox" id="battery" name="battery"/>
+			<label for="battery">Battery</label>
+		</div>
+		
+		<div>
+			<input type="checkbox" id="gas" name="gas"/>
+			<label for="gas">Gas</label>
+		</div>
+		
+		<div>
+			<input type="checkbox" id="noPower" name="noPower"/>
+			<label for="noPower">No power source</label>
+		</div><br>
+		
+		
+		<label for="internet">Internet Access for the Dwelling:</label><br>
+		<br><select id="internet" name="internet">
+			<option value="fibreHouse">Fibre to the House</option>
+			<option value="fibreCurb">Fibre to the Curb</option>
+			<option value="fibreNode">Fibre to the Node</option>
+			<option value="wireless">Fixed wireless</option>
+			<option value="adsl">Adsl</option>
+			<option value="mobile">Mobile Broadband</option>
+			<option value="noNet">No Internet</option>
+		 </select><br>
+		 
+		<br><label for="averageDownload">Avergage monthly downlaod in GB:</label><br>
+		<br><input type="number" id="averageDownload" name="averageDownload"
+			min="1" max="6"/><div class="help"><img src="qm.png" alt="question mark" id="qm">
+			<span class="helptext">Enter the internets download speed in Gigabytes</span>
+		</div><br>
+		
+		<br><label for="numBedrooms">How many bedrooms in the  dwelling:</label><br><br>
+		<input type="number" id="numBedrooms" name="numBedrooms"
+			min="2" max="4"/><br><div class="help"><img src="qm.png" alt="question mark" id="qm">
+			<span class="helptext">Enter the number of Bedrooms in the house</span></div>
+		
+		
+			
+		
+		
+			
+		<br><label for="evDwelling">Are there any electric vehicles garaged at the dwelling?:</label><br>
+		<input type="radio" id="noEvAtDwelling" name="evAtDwelling" value="No" checked="checked" onclick="evDwelling()"> No </input>
+		<input type="radio" id="yesEvAtDwelling" name="evAtDwelling" value="Yes" onclick="evDwelling()"> Yes </input> <br>
+		
+		
+		<br><div class="evType" id="evType">
+		 <label for="evType">Type of EV:</label>
+		 <select  name="evType">
+			<option value="hybridCar">Hybrid Car</option>
+			<option value="hybridSuv">Hyrbid Suv</option>
+			<option value="truck">Truck</option>
+			<option value="hybridTruck">Hybrid Truck</option>
+			<option value="scooter">Scooter</option>
+			<option value="motorcycle">Motorcycle</option>
+		  </select>
+		</div><br>
+		<br><input id="Button" type="button" value="Back" onclick="displayStart();"/>
+		<input id="Button" type="button" value="Next" onclick="displayAnimals();"/>
+		<hr class="hline">
+
+	</div>
+	
+	<!-- Animals section of the form -->
+	<h2>3. Animals in the Dwelling</h2>
+	<hr class="hline">
+	
+	<div class="animals" id="animals">
+		
+		<label for="animal">How many types of animal are at the dwelling:</label><br>
+			<input type="number" id="animal" name="animal"
+				min="2" max="4" oninput="animalsInDwelling();"><div class="help"><img src="qm.png" alt="question mark" id="qm">
+			<span class="helptext">Enter the number of animal types e.g if you have a 1 dog and 2 cats you would enter 2 </span>
+		</div><br>
+		
+		<div class="animalInfo" id="animalInfo">
+		 
+		</div>
+		 <br><input id="Button" type="button" value="Back" onclick="backToDwelling();"/>
+		 <input id="Button" type="button" value="Next" onclick="displayRating();"/>
+		 <hr class="hline">
+	    </div>
+	
+	<!--Rating section of the form -->
+	<h2>4. Rating your experince</h2>
+	<hr class="hline">
+	
+	<div class="rating" id="rating">
+		
+		<br><legend>For follow-up questions please provide either:</legend><br>
+		
+		<label for="phone">Enter your phone number:</label><br>
+		<input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{8}"><br>
+		
+		<br><label for="email">Or enter your email:</label><br>
+		<input type="email" id="email" name="email"><br>
+		
+	    <br><legend>How difficult was the questionare to navigate:</legend><br>
+
+		<div>
+			<input type="radio" id="veryHard" name="veryHard" checked>
+		<label for="veryHard">Very Hard</label><br>
+		
+
+		
+			<input type="radio" id="hard" name="hard">
+			<label for="hard">Hard</label><br>
+			
+		
+			<input type="radio" id="ok" name="ok">
+			<label for="ok">Ok</label><br>
+		
+		
+		
+			<input type="radio" id="easy" name="easy">
+			<label for="easy">Easy</label><br>
+		
+		
+		
+			<input type="radio" id="veryEasy" name="veryEasy">
+			<label for="veryEasy">Very Easy</label><br>
+		</div>
+		
+		
+		<br><legend>Where the input requirements easy to follow?:</legend><br>
+
+		<div>
+			<input type="radio" id="veryConfusing" name="veryConfusing" checked>
+		<label for="veryConfusing">Very confusing</label><br>
+		
+
+		
+			<input type="radio" id="ok" name="ok">
+			<label for="ok">Ok</label><br>
+		
+		
+		
+			<input type="radio" id="clear" name="clear">
+			<label for="clear">Clear</label><br>
+		
+		
+	
+		
+			<input type="radio" id="veryEasy" name="veryEasy">
+			<label for="veryEasy">Very Easy</label>
+		</div>
+		
+		<br><legend>Did you need to use the Help:</legend><br>
+
+		<div>
+			<input type="radio" id="useHelp" name="useHelp"
+             checked>
+		<label for="veryOften">Very often</label><br>
+		
+
+		
+			<input type="radio" id="ok" name="often">
+			<label for="often">Often</label><br>
+		
+		
+		
+			<input type="radio" id="occasionally" name="occasionally">
+			<label for="occasionally">Occasionally</label><br>
+		
+		
+	
+		
+			<input type="radio" id="never" name="never">
+			<label for="never">Never</label>
+		</div>
+		
+		<br><legend>Did you find the help useful?:</legend><br>
+
+		<div>
+			<input type="radio" id="veryConfusing" name="helpUseful"
+             checked>
+		<label for="veryConfusing">Very confusing</label><br>
+		
+
+		
+			<input type="radio" id="yes" name="yes">
+			<label for="yes">Yes</label><br>
+		
+		
+		
+			<input type="radio" id="no" name="no">
+			<label for="no">No</label><br>
+		
+		
+	
+		
+			<input type="radio" id="didNotUseIt" name="didNotUseIt">
+			<label for="didntUse">Did not use it</label>
+		</div>
+		
+		 <br><label for="comments">Any Comments?:</label><br><br>
+         <textarea type="text" id="comment" name="comment" rows="5" cols="50"></textarea><br><br>
+	</form>	 
+		 <br><input id="Button" type="button" value="Back" onclick="backToAnimals();"/>
+		 <input type="button" onclick="submitForm()" value="Submit form">
+		<hr class="hline">
+	
+	</div>
+
+</div>
+	<div class="aboutUs" id="aboutUs">
+		<h2>About us</h2>
+		<p>The ABS advises official bodies on<br> producing and using data and statistics,<br> formulates standards, and works with<br> states and territories<br> and internationally</P>
+	</div>
+
+	<div class="contactUs" id="contactUs">
+		<h2>Contact us</h2>
+		<p>Visit our website at:<br> https://www.abs.gov.au/</p>
+	</div
+</div>
+
+</body>
